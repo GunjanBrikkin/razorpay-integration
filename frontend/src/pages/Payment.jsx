@@ -14,7 +14,7 @@ const PaymentPage = () => {
   // Function to verify payment and update status
   const verifyPayment = async (paymentData) => {
     try {console.log("paymentData",paymentData)
-      const res = await axios.post("http://localhost:8081/api/payment/verify-payment", {
+      const res = await axios.post("https://razorpay-integration-1-ogch.onrender.com/api/payment/verify-payment", {
         razorpay_payment_id: paymentData.razorpay_payment_id,
         razorpay_order_id: paymentData.razorpay_order_id,
         razorpay_signature: paymentData.razorpay_signature,
@@ -42,7 +42,7 @@ const PaymentPage = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:8081/api/payment/create-order", {
+      const res = await axios.post("https://razorpay-integration-1-ogch.onrender.com/api/payment/create-order", {
         amount: amount * 100, // Convert to paise for Razorpay
         user_id: user._id,
       });

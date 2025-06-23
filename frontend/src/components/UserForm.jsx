@@ -29,7 +29,7 @@ const UserForm = () => {
     setSuccess(null);
 
     try {
-      const res = await axios.post("http://localhost:8081/api/users/create", formdata);
+      const res = await axios.post("https://razorpay-integration-1-ogch.onrender.com/api/users/create", formdata);
       if (res.data.success) {
         setSuccess(true);
         setMessage("User created successfully!");
