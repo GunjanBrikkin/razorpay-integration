@@ -9,8 +9,8 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use("/api/users",userRoutes);
-app.use("/api/payment", paymentRoutes);
+app.use("https://razorpay-integration-1-ogch.onrender.com/api/users",userRoutes);
+app.use("https://razorpay-integration-1-ogch.onrender.com/api/payment", paymentRoutes);
 
 module.exports = app;
 
